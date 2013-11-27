@@ -1,25 +1,44 @@
-<html>
+<!DOCTYPE html>
   <head>
+    <meta charset="utf-8">
 		<script src="moving_object.js"></script>
 		<script src="asteroid.js"></script>
     <script src="game.js"></script>
     <script src="ship.js"></script>
 		<script src="bullet.js"></script>
 		<script src="keymaster.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="foundation.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
   </head>
 
   <body>
-    <script>
-			DIM_X = 800;
-			DIM_Y = 500;
-      var canvas = document.createElement("canvas");
-      canvas.setAttribute("width", DIM_X);
-      canvas.setAttribute("height", DIM_Y);
+    <div class="row">
+      <div class="name small-3 large-centered columns"><h1> &nbsp;Asteroids</h1></div>
+      </div>
+      <script>
+  			DIM_X = 800;
+  			DIM_Y = 500;
+        var canvas = document.createElement("canvas");
+        canvas.setAttribute("width", DIM_X);
+        canvas.setAttribute("height", DIM_Y);
 
-      var body = document.getElementsByTagName("body")[0];
-      body.appendChild(canvas);
+        var body = document.getElementsByTagName("body")[0];
+        body.appendChild(canvas);
 
-      new Asteroids.Game(canvas.getContext("2d")).start();
-    </script>
+        new Asteroids.Game(canvas.getContext("2d")).start();
+      </script>
+      <p></p>
+      <div class="row">
+        <div class="name small-8 large-centered columns">
+          <div class="panel">
+        
+            <h4>How to play:</h4>
+            <br>
+            <p>Use the arrow keys to move the space ship.</p>
+            <p>Hit the spacebar to shoot bullets and destroy incoming asteroids.</p>
+            <p>Be careful. A collision = Game Over.</p>
+          </div>
+        </div>
+    </div>
   </body>
 </html>
